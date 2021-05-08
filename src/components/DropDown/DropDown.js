@@ -4,7 +4,10 @@ import PropTypes from 'prop-types';
 const propTypes = {
   onValueChange: PropTypes.func,
   selectedValue: PropTypes.string.isRequired,
-  options: PropTypes.arrayOf(PropTypes.string),
+  options: PropTypes.arrayOf(PropTypes.shape({
+    key: PropTypes.string,
+    value: PropTypes.value,
+  })),
 };
 
 const defaultProps = {
@@ -16,11 +19,19 @@ const DropDown = ({
   onValueChange,
   selectedValue,
   options = [],
+  identifier,
   ...restProps
 }) => {
 
   const renderOptions = () => {
-    return options.map((item) => <option value={item}>{item}</option>);
+    return options.map(
+      (item) => <option
+        value={item.key}
+        key={`Option-${item.key}-${identifier}`}
+      >
+        {item.value}
+      </option>
+    );
   }
 
   return (

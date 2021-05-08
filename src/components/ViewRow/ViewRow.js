@@ -38,9 +38,13 @@ const ViewRow = ({
   const { id, name, email, role } = rowData;
   const uniqKey = `ViewRow-${id}`;
 
-  const getColumn = (value) => {
+  const getColumn = (value, isRole = false) => {
+    const className = isRole ?
+      'ViewRow__column ViewRow__column--role'
+      : 'ViewRow__column'
+
     return (
-      <div className="ViewRow__column">
+      <div className={className}>
         {value}
       </div>
     );
@@ -74,7 +78,7 @@ const ViewRow = ({
       />
       {getColumn(name)}
       {getColumn(email)}
-      {getColumn(role)}
+      {getColumn(role, true)}
       {isRowHeader ?
         getColumn("ACTIONS")
         :

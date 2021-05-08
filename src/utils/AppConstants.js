@@ -9,7 +9,16 @@ export const LAST = 'LAST';
 export const NEXT = 'NEXT';
 export const FIRST = 'FIRST';
 
-export const USER_ROLES = ['Admin', 'Member'];
+export const USER_ROLES = [
+  {
+    key: 'admin',
+    value:'Admin'
+  },
+  {
+    key: 'member',
+    value: 'Member'
+  }
+  ];
 export const ROWS_PER_PAGE = 10;
 
 export const initialState = {

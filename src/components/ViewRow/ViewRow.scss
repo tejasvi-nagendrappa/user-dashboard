@@ -4,6 +4,9 @@
   .ViewRow__column {
     display: flex;
 
+    &.ViewRow__column--role {
+      text-transform: capitalize;
+    }
     @include no-outline-and-selection;
   }
 

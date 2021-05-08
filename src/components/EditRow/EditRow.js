@@ -23,7 +23,7 @@ const EditRow = ({ rowData, toggleEditMode }) => {
   const [rowState, updateRowState] = useState(rowData);
   const dispatch = useContext(DashBoardContext);
 
-  const { name, email, role } = rowState;
+  const { name, email, role, id } = rowState;
 
   const updateChanges = (key, evt) => {
     const { target: { value = '' } } = evt;
@@ -74,6 +74,7 @@ const EditRow = ({ rowData, toggleEditMode }) => {
         selectedValue={role}
         options={USER_ROLES}
         className="EditRow__input"
+        identifier={id}
       />
 
       <div className="EditRow__btnGroup">
