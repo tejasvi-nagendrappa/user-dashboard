@@ -1,0 +1,10 @@
+.DashBoard {
+  display: flex;
+  flex-flow: column;
+  padding: 20px;
+
+  .DashBoard__search {
+    height: 40px;
+    font-weight: 400;
+  }
+}

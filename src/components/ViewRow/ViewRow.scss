@@ -1,0 +1,26 @@
+@import "../../index.scss";
+
+.ViewRow {
+  .ViewRow__column {
+    display: flex;
+
+    @include no-outline-and-selection;
+  }
+
+  .ViewRow__btn {
+    background: transparent;
+    border: none;
+    padding-right: 10px;
+    text-decoration: underline;
+    cursor: pointer;
+    @include no-outline-and-selection;
+  }
+
+  &.ViewRow--selected {
+    background: grey;
+    opacity: 0.5;
+    border: 1px solid black;
+  }
+  @include grid-row;
+  grid-template-columns: 0.25fr 1fr 1fr 1fr 0.5fr;
+}

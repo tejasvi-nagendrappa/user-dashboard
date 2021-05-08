@@ -1,0 +1,30 @@
+@import "../../index.scss";
+
+@mixin button-style {
+  height: 40px;
+  padding: 10px;
+  margin: 10px;
+  align-items: center;
+  border-radius: 10px;
+  @include no-outline-and-selection;
+}
+
+.PaginationBar {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+
+  .PaginationBar__btn {
+    @include button-style;
+  }
+
+  .PaginationBar__deleteBtnWrapper {
+    position: absolute;
+    left: 0;
+  }
+
+  .PaginationBar__btnDelete {
+    background-color: red;
+    @include button-style;
+  }
+}

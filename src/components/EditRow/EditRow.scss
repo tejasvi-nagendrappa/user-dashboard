@@ -1,0 +1,22 @@
+@import "../../index.scss";
+
+.EditRow {
+  .EditRow__input {
+    padding: 5px;
+    margin-right: 5px;
+  }
+
+  .EditRow__btnGroup {
+    display: flex;
+    padding: 0 10px;
+
+    .EditRow__btn {
+      margin-right: 20px;
+      height: 30px;
+      border-radius: 10px;
+      min-width: 70px;
+    }
+  }
+
+  @include grid-row;
+}

@@ -1,0 +1,13 @@
+.DashBoardContainer {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  overflow-x: auto;
+
+  .Error {
+    font-weight: bolder;
+    font-size: large;
+    color: red;
+  }
+}
